@@ -14,7 +14,12 @@
             <!-- announcements content goes here -->
         </div>
         <div class="tab-pane" id="enrollment">
-            <!-- enrollment content goes here -->
+            <div class="text-center mt-4">
+                <h5 style="color: #007dc4;">Enrollment is now open.</h5>
+                <p style="color: #555; font-size: 14px;">Click the button below to view available subjects and select your schedule.</p>
+                <a href="{{ route('enrollment.index') }}" class="btn btn-ghost mt-2">Enroll Now</a>
+            </div>
+        </div>
         </div>
         <div class="tab-pane" id="schedule">
             <!-- schedule content goes here -->

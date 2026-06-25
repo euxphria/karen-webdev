@@ -34,10 +34,10 @@ class ImportEnrolledStudents extends Command
             EnrolledStudent::updateOrCreate(
                 ['email' => trim($data['email'])],
                 [
-                    'name' => $data['name'] ?? null,
+                    'name'       => $data['name'] ?? null,
                     'student_id' => $data['student_id'] ?? null,
-                    'year'    => $data['year'] ?? null,
-                    'program' => $data['program'] ?? null,
+                    'program'    => $data['program'] ?? null,
+                    'year'       => $data['year'] ?? null,
                 ]
             );
 

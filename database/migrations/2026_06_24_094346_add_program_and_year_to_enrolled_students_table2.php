@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('enrolled_students', function (Blueprint $table) {
-            $table->integer('year')->nullable();
+            $table->string('program')->nullable();
         });
     }
 

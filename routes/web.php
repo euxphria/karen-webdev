@@ -4,7 +4,7 @@ use App\Http\Controllers\Auth\AdminLoginController;
 use App\Http\Controllers\Auth\Login;
 use App\Http\Controllers\Auth\Logout;
 use App\Http\Controllers\Auth\Register;
-use App\Http\Controllers\FormController;
+use App\Http\Controllers\EnrollmentController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -51,5 +51,11 @@ Route::group(['prefix' => 'admin'], function(){
         })->name('admin.logout');
     });
 });
+
+//ENROLLMENT
+Route::group(['prefix' => 'enrollment'], function(){
+    Route::get('/', [EnrollmentController::class, 'index'])->name('enrollment.index');
+    Route::post('/', [EnrollmentController::class, 'store'])->name('enrollment.store');
+})->middleware('auth');
 
 Route::view('home', 'home');
